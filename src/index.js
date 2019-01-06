@@ -1,29 +1,25 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 
+import Button from './components/button'
+
 const StyledMain = styled.View`
+  flex: 1;
   justify-content: center;
   align-items: center;
 `
 
-const StyledButton = styled.TouchableOpacity`
-  width: 300px;
-  height: 40px;
-  justify-content: center;
-  align-items: center;
-  background-color: #03A9F4;
-  border-radius: 4px;
-`
-
-const Main = () => (
-  <StyledMain>
-    <StyledButton>
-      <Text>
-        CLick to request permission
-      </Text>
-    </StyledButton>
-  </StyledMain>
-)
+class Main extends Component {
+  render () {
+    return (
+      <StyledMain>
+        <Button
+          label='Click to schedule notification'
+          onPress={() => {}}
+        />
+      </StyledMain>
+    )
+  }
+}
 
 export default Main
